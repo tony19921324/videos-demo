@@ -1,0 +1,36 @@
+html {
+    box-sizing: border-box;
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+    padding: 0;
+    margin: 0;
+    font-size: inherit;
+}
+
+/* functional css */
+.mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+.relative {
+    position: relative;
+}
+.absolute {
+    position: absolute;
+}
+.flex {
+    display: flex;
+}
+.flex-wrap {
+    flex-wrap: wrap;
+}
+.justify-center {
+    justify-content: center;
+}
+.justify-between {
+    justify-content: space-between;
+}
