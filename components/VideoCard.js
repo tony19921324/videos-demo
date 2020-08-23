@@ -5,6 +5,7 @@ function VideoCard({
     description,
     duration,
     thumbnailUrl,
+    likedButtonText,
     liked,
     onToggleLiked,
 }) {
@@ -17,7 +18,7 @@ function VideoCard({
         <div className='root'>
             <img src={thumbnailUrl} />
             <div className='like-row flex justify-between'>
-                <button className={clsx(liked && 'liked')} onClick={handleToggleLiked}>收藏</button>
+                <button className={clsx(liked && 'liked')} onClick={handleToggleLiked}>{likedButtonText || '收藏'}</button>
                 <div className='duration'>{duration}</div>
             </div>
             <div className='title ellipsis'>{title}</div>

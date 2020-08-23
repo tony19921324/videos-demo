@@ -1,7 +1,7 @@
 import axios from 'axios';
 import store from 'store';
 
-export default async () => {
+const fetchPopularVideos = async () => {
 
     const result1 = await axios(`https://www.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails&chart=mostPopular&maxResults=100&regionCode=TW&key=AIzaSyB1QdKBuDnoEFqKWKdiCWuJUfiXv4y9hHY`)
         .then(res => res.data)
@@ -23,4 +23,6 @@ export default async () => {
         duration: item.contentDetails.duration,
         liked: Boolean(likedVideoIds[item.id])
     }));
-}
+};
+
+export default fetchPopularVideos;
